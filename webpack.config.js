@@ -8,6 +8,17 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     filename: "build.js",
   },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "build"),
+    },
+    liveReload: true,
+    port: 3000,
+    open: true,
+    hot: true,
+    // compress: true,
+    // historyApiFallback: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
