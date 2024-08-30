@@ -3,5 +3,5 @@
     "browser": true
   },
   "parser": "@babel/eslint-parser",
-  "extends": ["airbnb", "plugin:prettier/recommended"]
+  "extends": ["airbnb-base", "plugin:prettier/recommended"]
 }
