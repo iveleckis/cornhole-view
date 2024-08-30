@@ -1,20 +1,10 @@
 import "./style.css";
 
-console.log("abc");
+const root = document.getElementById("root");
 
-class Animal {
-  constructor() {}
+const h1 = document.createElement("h1");
 
-  bark() {
-    console.log("bark");
-  }
-}
+h1.textContent = "Test123";
 
-const dog = new Animal();
-
-dog.bark();
-
-const obj = { name: "John" };
-const name = obj?.name ?? "Default";
-
-console.log(name);
+root.appendChild(h1);
+const dog = "";
