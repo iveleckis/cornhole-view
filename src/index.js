@@ -1,9 +1,5 @@
+import init from "./init";
+
 import "./style.css";
 
-const root = document.getElementById("root");
-
-const h1 = document.createElement("h1");
-
-h1.textContent = "Test123";
-
-root.appendChild(h1);
+init();
