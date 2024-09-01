@@ -35,7 +35,7 @@ export default function init() {
   container.appendChild(nameInput);
 
   const buttonContainer = document.createElement("div");
-  buttonContainer.classList = "flex gap-x-2";
+  buttonContainer.className = "flex gap-x-2";
 
   const createGame = document.createElement("button");
   createGame.className = "btn btn-success";
@@ -52,5 +52,5 @@ export default function init() {
 
   container.appendChild(buttonContainer);
 
-  root.appendChild(container);
+  root?.appendChild(container);
 }

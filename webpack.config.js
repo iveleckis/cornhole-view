@@ -4,7 +4,7 @@ const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: path.resolve(__dirname, "./src/index.js"),
+  entry: path.resolve(__dirname, "./src/index.ts"),
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "build.js",
@@ -20,7 +20,7 @@ module.exports = {
     compress: true,
   },
   resolve: {
-    extensions: ["*", ".js"],
+    extensions: ["*", ".js", ".ts"],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -36,9 +36,14 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
-        test: /\.(js)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
+      },
+      {
+        test: /\.ts$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
       },
     ],
   },
