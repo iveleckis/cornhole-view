@@ -2,6 +2,6 @@
   "env": {
     "browser": true
   },
-  "parser": "@babel/eslint-parser",
+  "ignores": "./build",
   "extends": ["airbnb-base", "plugin:prettier/recommended"]
 }

@@ -1,5 +1,7 @@
-import init from "./init";
+import landingView from "./views/landingView";
 
 import "./style.css";
 
-init();
+(() => {
+  landingView();
+})();
